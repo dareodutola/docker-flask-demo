@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t dare1/crazyflaskapp:$BUILD_NUMBER .'
+                sh 'docker build -t dare1/crazyflaskapp1:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push dare1/crazyflaskapp:$BUILD_NUMBER'
+                sh 'docker push dare1/crazyflaskapp1:$BUILD_NUMBER'
             }
         }
 }
